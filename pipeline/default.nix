@@ -7,6 +7,7 @@
 {
   arch,
   anyKernelVariant,
+  anyKernelInitBootSupport,
   clangVersion,
   kernelSU,
   kernelConfig,
@@ -53,6 +54,7 @@ let
       inherit arch kernelImageName;
       kernel = kernelBuild;
       variant = anyKernelVariant;
+      initBootSupport = anyKernelInitBootSupport;
     };
 
     bootImg = callPackage ./build-boot-img.nix {

@@ -1,7 +1,4 @@
-{
-  flake-parts-lib,
-  ...
-}:
+{ flake-parts-lib, ... }:
 {
   options.perSystem = flake-parts-lib.mkPerSystemOption (
     {
@@ -30,6 +27,11 @@
               ];
               description = "Architecture of the kernel";
               default = "osm0sis";
+            };
+            anyKernelInitBootSupport = lib.mkOption {
+              type = lib.types.bool;
+              description = "Whether your phone supports init_boot";
+              default = false;
             };
             clangVersion = lib.mkOption {
               type = lib.types.nullOr (lib.types.either lib.types.str lib.types.int);

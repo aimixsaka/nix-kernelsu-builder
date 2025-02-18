@@ -8,6 +8,7 @@
   kernel,
   kernelImageName,
   variant,
+  initBootSupport,
   ...
 }:
 let
@@ -19,11 +20,24 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [ zip ];
 
-  postPatch = lib.optionalString (variant == "osm0sis") ''
-    sed -i 's/do.devicecheck=1/do.devicecheck=0/g' anykernel.sh
-    sed -i 's!BLOCK=/dev/block/platform/omap/omap_hsmmc.0/by-name/boot;!BLOCK=auto;!g' anykernel.sh
-    sed -i 's/IS_SLOT_DEVICE=0;/IS_SLOT_DEVICE=auto;/g' anykernel.sh
-  '';
+  # BLOCK=auto not always working...
+  postPatch =
+    lib.optionalString (variant == "osm0sis") ''
+      sed -i 's/do.devicecheck=1/do.devicecheck=0/g' anykernel.sh
+      sed -i 's/IS_SLOT_DEVICE=0;/IS_SLOT_DEVICE=auto;/g' anykernel.sh
+    ''
+    + (
+      if initBootSupport then
+        ''
+          sed -i 's!BLOCK=/dev/block/platform/omap/omap_hsmmc.0/by-name/boot;!BLOCK=boot;!g' anykernel.sh
+          sed -i 's/^dump_boot;/split_boot;/g' anykernel.sh
+          sed -i 's/^write_boot;/flash_boot;/g' anykernel.sh
+        ''
+      else
+        ''
+          sed -i 's!BLOCK=/dev/block/platform/omap/omap_hsmmc.0/by-name/boot;!BLOCK=auto;!g' anykernel.sh
+        ''
+    );
 
   buildPhase = ''
     runHook preBuild
