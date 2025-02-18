@@ -1,3 +1,20 @@
+## Difference with original repo:
+
+- Add `anyKernelInitBootSupport` option to support phones that support `init_boot`,
+  but don't work well with AnyKernel3's `BOOT=auto` option.
+- Add support for OnePlus Ace3/12R for LineageOS 22.1
+
+To use this repo(action), you need to:
+
+- install `garnix` github app for this repo
+- change garnix public keys in `.github/workflow/build.yml` to your own
+  by following https://garnix.io/docs/caching
+  (Recommended if you are building a different kernel for other phones.)
+
+## Original README:
+
+---
+
 # Nix-based KernelSU Android Boot Image Builder
 
 A set of nix packages (derivations) to build Android `boot.img` and AnyKernel installation zip files for given kernel source code.
