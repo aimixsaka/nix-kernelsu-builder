@@ -35,7 +35,7 @@ src.regex = "download\\/v[0-9\\._]+\\/KernelSU[^\"]*_([0-9]+)-release\\.apk"
 fetch.url = "https://example.com"
 
 [oneplus-ace3-lineageos-22_1]
-src.git = "https://github.com/LineageOS/android_kernel_motorola_sm8550.git"
+src.git = "https://github.com/OnePlus12R-development/android_kernel_oneplus_sm8550.git"
 src.branch = "lineage-22.1"
 fetch.github = "OnePlus12R-development/android_kernel_oneplus_sm8550"
 
