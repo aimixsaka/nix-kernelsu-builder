@@ -4,12 +4,14 @@
   but don't work well with AnyKernel3's `BOOT=auto` option.
 - Add support for OnePlus Ace3/12R for LineageOS 22.1
 
+You can find Artifacts in github action page.
+
 To use this repo(action), you need to:
 
 - install `garnix` github app for this repo
 - change garnix public keys in `.github/workflow/build.yml` to your own
   by following https://garnix.io/docs/caching
-  (Recommended if you are building a different kernel for other phones.)
+- enable action for your repo
 
 ## Original README:
 
