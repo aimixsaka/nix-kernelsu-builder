@@ -16,10 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         build_target:
-          - amazon-fire-hd-karnak
-          - moto-rtwo-lineageos-21
-          - moto-rtwo-lineageos-22_1
-          - oneplus-8t-blu-spark
+          - oneplus-ace3-lineageos-22_1
     runs-on: ubuntu-latest
     env:
       GIT_SSL_NO_VERIFY: 'true'
@@ -35,17 +32,14 @@ jobs:
           remove-haskell: 'true'
           remove-codeql: 'true'
           remove-docker-images: 'true'
-
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Set up QEMU
         id: qemu
         uses: docker/setup-qemu-action@v3
         with:
           image: tonistiigi/binfmt:latest
           platforms: all
-
       - name: Install nix
         uses: cachix/install-nix-action@v30
         with:
@@ -57,10 +51,8 @@ jobs:
             substituters = https://nix-community.cachix.org https://cache.garnix.io https://cache.nixos.org/
             trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs= cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g=
             trusted-substituters = https://nix-community.cachix.org https://cache.garnix.io https://cache.nixos.org/
-
       - name: Setup GitHub Actions cache for Nix
         uses: DeterminateSystems/flakehub-cache-action@main
-
       - name: Set nix daemon tmpdir path
         run: |
           sudo mkdir -p /nix/tmpdir
@@ -74,7 +66,6 @@ jobs:
           sudo mv override.conf /etc/systemd/system/nix-daemon.service.d/override.conf
           sudo systemctl daemon-reload
           sudo systemctl restart nix-daemon
-
       - name: Build nix packages
         run: |
           nix flake update
@@ -85,7 +76,6 @@ jobs:
           env TMPDIR=/nix/tmpdir nix build -L .#${{ matrix.build_target }}
           mkdir ${{ matrix.build_target }}
           cp -r result/* ${{ matrix.build_target }}/
-
       - name: Upload files
         uses: actions/upload-artifact@v4
         with:

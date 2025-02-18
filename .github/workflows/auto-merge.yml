@@ -1,8 +1,6 @@
 name: auto-merge
-
 on:
   pull_request_target:
-
 jobs:
   auto-merge:
     name: Dependabot Auto Merge
@@ -13,4 +11,4 @@ jobs:
       - uses: ahmadnassri/action-dependabot-auto-merge@v2
         with:
           target: minor
-          github-token: ${{ secrets.AUTOMERGE_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
