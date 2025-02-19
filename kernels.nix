@@ -30,6 +30,9 @@ _: {
             "${sources.wildplus-kernel-patches.src}/69_hide_stuff.patch"
           ];
           kernelSrc = sources.oneplus-ace3-lineageos-22_1.src;
+          kernelConfig = ''
+            CONFIG_BPF_STREAM_PARSER=y
+          '';
           #oemBootImg = ./boot.img;
         };
       };
