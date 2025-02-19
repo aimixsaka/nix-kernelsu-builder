@@ -1,7 +1,5 @@
 ## Difference with original repo:
 
-- Add `anyKernelInitBootSupport` option to support phones that support `init_boot`,
-  but don't work well with AnyKernel3's `BOOT=auto` option.
 - Add support for OnePlus Ace3/12R for LineageOS 22.1
 
 You can find Artifacts in github action page.
