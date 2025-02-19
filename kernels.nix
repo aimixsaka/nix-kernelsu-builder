@@ -7,7 +7,7 @@ _: {
     {
       kernelsu = {
         oneplus-ace3-lineageos-22_1 = {
-          anyKernelVariant = "osm0sis";
+          anyKernelVariant = "kernelsu";
           clangVersion = "latest";
           kernelSU.variant = "next";
           susfs = {
