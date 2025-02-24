@@ -155,7 +155,7 @@
     },
     "oneplus-ace3-lineageos-22_1": {
         "cargoLocks": null,
-        "date": "2025-02-15",
+        "date": "2025-02-23",
         "extract": null,
         "name": "oneplus-ace3-lineageos-22_1",
         "passthru": null,
@@ -167,16 +167,16 @@
             "name": null,
             "owner": "OnePlus12R-development",
             "repo": "android_kernel_oneplus_sm8550",
-            "rev": "aa002b85936d80b9e28a3161c2f4f8ae3f301f7b",
-            "sha256": "sha256-Y2MkhVEjpu9IyThIZwCA5wD2fK+JXt0uameNGZg2G68=",
+            "rev": "e4621a167b4cd806178eb76f1c481d8ee07a0e7a",
+            "sha256": "sha256-grgtJulkBH3IgNlaQX/u91Vq8j2wMTv6rEt3dWwm5gE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "aa002b85936d80b9e28a3161c2f4f8ae3f301f7b"
+        "version": "e4621a167b4cd806178eb76f1c481d8ee07a0e7a"
     },
     "susfs-android14-5_15": {
         "cargoLocks": null,
-        "date": "2025-02-10",
+        "date": "2025-02-23",
         "extract": null,
         "name": "susfs-android14-5_15",
         "passthru": null,
@@ -186,13 +186,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "051d3dda6c04d0c5c72e754a61d402dfabd462d4",
-            "sha256": "sha256-QOf120+ZjuaO/iQo5MUshPI5tYc0AfAUkWsoKFz6pLU=",
+            "rev": "9c3bd9a87710b871574b8d7e1f8099cb8db91fe3",
+            "sha256": "sha256-tm2ZrvpPhPD1H+DhZU8CjRi0X1gU6OXcd3BSjoWQ5OQ=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://gitlab.com/simonpunk/susfs4ksu.git"
         },
-        "version": "051d3dda6c04d0c5c72e754a61d402dfabd462d4"
+        "version": "9c3bd9a87710b871574b8d7e1f8099cb8db91fe3"
     },
     "wildplus-kernel-patches": {
         "cargoLocks": null,

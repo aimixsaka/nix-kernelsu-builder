@@ -93,29 +93,29 @@
   };
   oneplus-ace3-lineageos-22_1 = {
     pname = "oneplus-ace3-lineageos-22_1";
-    version = "aa002b85936d80b9e28a3161c2f4f8ae3f301f7b";
+    version = "e4621a167b4cd806178eb76f1c481d8ee07a0e7a";
     src = fetchFromGitHub {
       owner = "OnePlus12R-development";
       repo = "android_kernel_oneplus_sm8550";
-      rev = "aa002b85936d80b9e28a3161c2f4f8ae3f301f7b";
+      rev = "e4621a167b4cd806178eb76f1c481d8ee07a0e7a";
       fetchSubmodules = false;
-      sha256 = "sha256-Y2MkhVEjpu9IyThIZwCA5wD2fK+JXt0uameNGZg2G68=";
+      sha256 = "sha256-grgtJulkBH3IgNlaQX/u91Vq8j2wMTv6rEt3dWwm5gE=";
     };
-    date = "2025-02-15";
+    date = "2025-02-23";
   };
   susfs-android14-5_15 = {
     pname = "susfs-android14-5_15";
-    version = "051d3dda6c04d0c5c72e754a61d402dfabd462d4";
+    version = "9c3bd9a87710b871574b8d7e1f8099cb8db91fe3";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "051d3dda6c04d0c5c72e754a61d402dfabd462d4";
+      rev = "9c3bd9a87710b871574b8d7e1f8099cb8db91fe3";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-QOf120+ZjuaO/iQo5MUshPI5tYc0AfAUkWsoKFz6pLU=";
+      sha256 = "sha256-tm2ZrvpPhPD1H+DhZU8CjRi0X1gU6OXcd3BSjoWQ5OQ=";
     };
-    date = "2025-02-10";
+    date = "2025-02-23";
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
