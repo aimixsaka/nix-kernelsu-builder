@@ -35,10 +35,6 @@ stdenv.mkDerivation {
     + (lib.optionalString kernelSU.enable ''
       cp -r ${kernelSU.src} ${kernelSU.subdirectory}
       chmod -R +w ${kernelSU.subdirectory}
-      # Force set KernelSU version
-      sed -i "/ version:/d" ${kernelSU.subdirectory}/kernel/Makefile
-      sed -i "/KSU_GIT_VERSION not defined/d" ${kernelSU.subdirectory}/kernel/Makefile
-      sed -i "s|ccflags-y += -DKSU_VERSION=|ccflags-y += -DKSU_VERSION=\"${kernelSU.revision}\"\n#|g" ${kernelSU.subdirectory}/kernel/Makefile
     '')
     + (lib.optionalString susfs.enable ''
       cp -r ${susfs.src}/kernel_patches/fs/* fs/
@@ -59,6 +55,12 @@ stdenv.mkDerivation {
       rm -f common/android/abi_gki_protected_exports_x86_64
     ''
     + (lib.optionalString kernelSU.enable ''
+      # Force set KernelSU version
+      # NOTE: Do this workaround later so ksu/susfs patch can be applied successfully
+      sed -i "/ version:/d" ${kernelSU.subdirectory}/kernel/Makefile
+      sed -i "/KSU_GIT_VERSION not defined/d" ${kernelSU.subdirectory}/kernel/Makefile
+      sed -i "s|ccflags-y += -DKSU_VERSION=|ccflags-y += -DKSU_VERSION=\"${kernelSU.revision}\"\n#|g" ${kernelSU.subdirectory}/kernel/Makefile
+
       bash ${kernelSU.subdirectory}/kernel/setup.sh
     '')
     + ''
