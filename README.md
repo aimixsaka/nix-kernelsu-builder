@@ -7,7 +7,6 @@ You can find Artifacts in github action page.
 To use this repo(action), you need to:
 
 - install `garnix` github app for this repo
-- change garnix public keys in `.github/workflow/build.yml` to your own
   by following https://garnix.io/docs/caching
 - enable action for your repo
 
