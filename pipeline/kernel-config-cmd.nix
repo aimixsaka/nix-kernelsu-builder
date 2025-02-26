@@ -11,9 +11,6 @@
 }:
 ''
   export CFG_PATH=arch/${arch}/configs/${defconfig}
-  cat >>$CFG_PATH <<EOF
-  ${additionalKernelConfig}
-  EOF
 ''
 + (lib.optionalString kernelSU.enable ''
   # Inject KernelSU options
@@ -43,6 +40,11 @@
   echo "CONFIG_KSU_SUSFS_SUS_SU=y" >> $CFG_PATH
   echo "CONFIG_TMPFS_XATTR=y" >> $CFG_PATH
 '')
++ ''
+  cat >>$CFG_PATH <<EOF
+  ${additionalKernelConfig}
+  EOF
+''
 + ''
   mkdir -p $out
   make ${builtins.concatStringsSep " " (finalMakeFlags ++ defconfigs)}
