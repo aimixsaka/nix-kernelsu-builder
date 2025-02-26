@@ -26,11 +26,11 @@ src.manual = "11872"
 fetch.url = "https://example.com"
 
 [kernelsu-next]
-src.github = "rifsxd/KernelSU-Next"
-fetch.git = "https://github.com/rifsxd/KernelSU-Next.git"
+src.github = "KernelSU-Next/KernelSU-Next"
+fetch.git = "https://github.com/KernelSU-Next/KernelSU-Next.git"
 
 [kernelsu-next-revision-code]
-src.webpage = "https://api.github.com/repos/rifsxd/KernelSU-Next/releases?per_page=1"
+src.webpage = "https://api.github.com/repos/KernelSU-Next/KernelSU-Next/releases?per_page=1"
 src.regex = "download\\/v[0-9\\._]+\\/KernelSU[^\"]*_([0-9]+)-release\\.apk"
 fetch.url = "https://example.com"
 
