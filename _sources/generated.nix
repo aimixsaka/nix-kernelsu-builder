@@ -53,7 +53,7 @@
     pname = "kernelsu-next";
     version = "v1.0.5";
     src = fetchgit {
-      url = "https://github.com/rifsxd/KernelSU-Next.git";
+      url = "https://github.com/KernelSU-Next/KernelSU-Next.git";
       rev = "v1.0.5";
       fetchSubmodules = false;
       deepClone = false;
@@ -119,14 +119,14 @@
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
-    version = "5c482da6c57ad1bd9c265c9ec0196517a47892f2";
+    version = "1f5b46b6deb34ffd6a53a362b254e61c7dfc8dd1";
     src = fetchFromGitHub {
       owner = "WildPlusKernel";
       repo = "kernel_patches";
-      rev = "5c482da6c57ad1bd9c265c9ec0196517a47892f2";
+      rev = "1f5b46b6deb34ffd6a53a362b254e61c7dfc8dd1";
       fetchSubmodules = false;
-      sha256 = "sha256-gMCUhxRR8jyfUlzQdZ3l4uEepHtlvcQezNgWoxamLME=";
+      sha256 = "sha256-3unXtA63eKh0qEQZ6o6SoDC8pDdkoMPipnqywABc1WE=";
     };
-    date = "2025-02-25";
+    date = "2025-02-26";
   };
 }
