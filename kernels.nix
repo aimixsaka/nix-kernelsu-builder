@@ -13,7 +13,7 @@ _: {
           susfs = {
             enable = true;
             inherit (sources.susfs-android14-5_15) src;
-            kernelsuPatch = "${sources.wildplus-kernel-patches.src}/0001-kernel-patch-susfs-v1.5.5-to-KernelSU-Next-v1.0.5.patch";
+            kernelsuPatch = "${sources.wildplus-kernel-patches.src}/next/0001-kernel-patch-susfs-v1.5.5-to-KernelSU-Next-v1.0.5.patch";
           };
           kernelDefconfigs = [
             "gki_defconfig "
@@ -29,7 +29,7 @@ _: {
           kernelPatches = [
             "${sources.wildplus-kernel-patches.src}/69_hide_stuff.patch"
             # See https://github.com/backslashxx/KernelSU/issues/5
-            "${sources.wildplus-kernel-patches.src}/new_hooks.patch"
+            "${sources.wildplus-kernel-patches.src}/next/next_hooks.patch"
           ];
           kernelSrc = sources.oneplus-ace3-lineageos-22_1.src;
           kernelConfig = ''
