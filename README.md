@@ -1,6 +1,7 @@
 ## Difference with original repo:
 
 - Add support for OnePlus Ace3/12R for LineageOS 22.1
+- Several minor changes/fixes
 
 You can find Artifacts in github action page.
 
