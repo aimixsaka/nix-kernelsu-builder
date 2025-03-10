@@ -16,7 +16,8 @@ jobs:
       fail-fast: false
       matrix:
         build_target:
-          - oneplus-ace3-lineageos-22_1
+          - oneplus-ace3-lineageos-22_1-official
+          - oneplus-ace3-lineageos-22_1-next
     runs-on: ubuntu-latest
     env:
       GIT_SSL_NO_VERIFY: 'true'
