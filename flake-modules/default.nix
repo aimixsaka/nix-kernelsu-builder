@@ -128,8 +128,8 @@
           };
           config = lib.mkMerge [
             (lib.mkIf (config.kernelSU.variant == "official") {
-              kernelSU.src = sources.kernelsu-stable.src;
-              kernelSU.revision = sources.kernelsu-stable-revision-code.version;
+              kernelSU.src = sources.kernelsu-main.src;
+              kernelSU.revision = sources.kernelsu-main-revision-code.version;
               kernelSU.subdirectory = "KernelSU";
             })
             (lib.mkIf (config.kernelSU.variant == "next") {

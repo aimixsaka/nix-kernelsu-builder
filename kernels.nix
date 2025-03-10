@@ -6,7 +6,36 @@ _: {
     in
     {
       kernelsu = {
-        oneplus-ace3-lineageos-22_1 = {
+        oneplus-ace3-lineageos-22_1-official = {
+          anyKernelVariant = "kernelsu";
+          kernelSU.variant = "official";
+          clangVersion = "latest";
+          susfs = {
+            enable = true;
+            inherit (sources.susfs-android14-5_15) src;
+          };
+          kernelDefconfigs = [
+            "gki_defconfig "
+            "vendor/kalama_GKI.config "
+            "vendor/oplus/kalama_GKI.config "
+            "vendor/debugfs.config"
+          ];
+          kernelImageName = "Image";
+          kernelMakeFlags = [
+            "KCFLAGS=\"-w\""
+            "KCPPFLAGS=\"-w\""
+          ];
+          kernelPatches = [
+            "${sources.wildplus-kernel-patches.src}/69_hide_stuff.patch"
+          ];
+          kernelSrc = sources.oneplus-ace3-lineageos-22_1.src;
+          kernelConfig = ''
+            # For dae proxy, though still not working due to other reason...
+            CONFIG_BPF_STREAM_PARSER=y
+          '';
+          #oemBootImg = ./boot.img;
+        };
+        oneplus-ace3-lineageos-22_1-next = {
           anyKernelVariant = "kernelsu";
           clangVersion = "latest";
           kernelSU.variant = "next";
