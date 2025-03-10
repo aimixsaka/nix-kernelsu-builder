@@ -49,6 +49,28 @@
     };
     date = "2019-11-25";
   };
+  kernelsu-main = {
+    pname = "kernelsu-main";
+    version = "203cd4d7465484e74643d275f904902a5a6b90c6";
+    src = fetchgit {
+      url = "https://github.com/tiann/KernelSU.git";
+      rev = "203cd4d7465484e74643d275f904902a5a6b90c6";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-FTjdlrUEZIqCoUPk9orNvEoHT2o71/olY2HzbqyqHeM=";
+    };
+    date = "2025-03-02";
+  };
+  kernelsu-main-revision-code = {
+    pname = "kernelsu-main-revision-code";
+    version = "12018";
+    src = fetchurl {
+      url = "https://example.com";
+      sha256 = "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=";
+    };
+  };
   kernelsu-next = {
     pname = "kernelsu-next";
     version = "v1.0.5";
@@ -65,27 +87,6 @@
   kernelsu-next-revision-code = {
     pname = "kernelsu-next-revision-code";
     version = "12430";
-    src = fetchurl {
-      url = "https://example.com";
-      sha256 = "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=";
-    };
-  };
-  kernelsu-stable = {
-    pname = "kernelsu-stable";
-    version = "v0.9.5";
-    src = fetchgit {
-      url = "https://github.com/tiann/KernelSU.git";
-      rev = "v0.9.5";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-pvaL6KEB7X3s8zyLQSPhBhoXaNdVDthH7HnAZRE9JYk=";
-    };
-  };
-  kernelsu-stable-revision-code = {
-    pname = "kernelsu-stable-revision-code";
-    version = "11872";
     src = fetchurl {
       url = "https://example.com";
       sha256 = "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=";

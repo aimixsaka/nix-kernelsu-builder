@@ -83,6 +83,41 @@
         },
         "version": "3ecb542702c2ca0e502533c3f6d02f0f06f584f1"
     },
+    "kernelsu-main": {
+        "cargoLocks": null,
+        "date": "2025-03-02",
+        "extract": null,
+        "name": "kernelsu-main",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "203cd4d7465484e74643d275f904902a5a6b90c6",
+            "sha256": "sha256-FTjdlrUEZIqCoUPk9orNvEoHT2o71/olY2HzbqyqHeM=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/tiann/KernelSU.git"
+        },
+        "version": "203cd4d7465484e74643d275f904902a5a6b90c6"
+    },
+    "kernelsu-main-revision-code": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "kernelsu-main-revision-code",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=",
+            "type": "url",
+            "url": "https://example.com"
+        },
+        "version": "12018"
+    },
     "kernelsu-next": {
         "cargoLocks": null,
         "date": null,
@@ -117,41 +152,6 @@
             "url": "https://example.com"
         },
         "version": "12430"
-    },
-    "kernelsu-stable": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "kernelsu-stable",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "v0.9.5",
-            "sha256": "sha256-pvaL6KEB7X3s8zyLQSPhBhoXaNdVDthH7HnAZRE9JYk=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/tiann/KernelSU.git"
-        },
-        "version": "v0.9.5"
-    },
-    "kernelsu-stable-revision-code": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "kernelsu-stable-revision-code",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=",
-            "type": "url",
-            "url": "https://example.com"
-        },
-        "version": "11872"
     },
     "oneplus-ace3-lineageos-22_1": {
         "cargoLocks": null,
