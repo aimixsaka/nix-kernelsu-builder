@@ -3,15 +3,15 @@
 {
   anykernel-kernelsu = {
     pname = "anykernel-kernelsu";
-    version = "ee30bad85a483cad2b1e4ff34e69f983a04f875a";
+    version = "ac6360f6fc1895cbd218246f12a771f63d0e5e4f";
     src = fetchFromGitHub {
       owner = "Kernel-SU";
       repo = "AnyKernel3";
-      rev = "ee30bad85a483cad2b1e4ff34e69f983a04f875a";
+      rev = "ac6360f6fc1895cbd218246f12a771f63d0e5e4f";
       fetchSubmodules = false;
-      sha256 = "sha256-QJS4+1teNcgUOy2gD+KuoEG/9pUNd/6uSH84AkAlVoQ=";
+      sha256 = "sha256-lWqFsucmu6tyLJd4JbNxbBPDRcArQ2KaSUeaqFH73cA=";
     };
-    date = "2023-10-30";
+    date = "2025-05-17";
   };
   anykernel-osm0sis = {
     pname = "anykernel-osm0sis";
@@ -51,17 +51,17 @@
   };
   kernelsu-main = {
     pname = "kernelsu-main";
-    version = "fd6f839ddab28bbe161563299af8846f73d51152";
+    version = "1dbaeaaae6db894ad1be018478d8a631dadb4525";
     src = fetchgit {
       url = "https://github.com/tiann/KernelSU.git";
-      rev = "fd6f839ddab28bbe161563299af8846f73d51152";
+      rev = "1dbaeaaae6db894ad1be018478d8a631dadb4525";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-MEf17PryE81gLRjlwAFac+oi7MZE2fbOwZsMgjJzrfQ=";
+      sha256 = "sha256-RvFt+drLBEbSN/tzbZdeWDNmBKuT+xC9y/9fFdIOsYs=";
     };
-    date = "2025-05-16";
+    date = "2025-05-18";
   };
   kernelsu-main-revision-code = {
     pname = "kernelsu-main-revision-code";

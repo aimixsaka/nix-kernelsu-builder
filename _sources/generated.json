@@ -1,7 +1,7 @@
 {
     "anykernel-kernelsu": {
         "cargoLocks": null,
-        "date": "2023-10-30",
+        "date": "2025-05-17",
         "extract": null,
         "name": "anykernel-kernelsu",
         "passthru": null,
@@ -13,12 +13,12 @@
             "name": null,
             "owner": "Kernel-SU",
             "repo": "AnyKernel3",
-            "rev": "ee30bad85a483cad2b1e4ff34e69f983a04f875a",
-            "sha256": "sha256-QJS4+1teNcgUOy2gD+KuoEG/9pUNd/6uSH84AkAlVoQ=",
+            "rev": "ac6360f6fc1895cbd218246f12a771f63d0e5e4f",
+            "sha256": "sha256-lWqFsucmu6tyLJd4JbNxbBPDRcArQ2KaSUeaqFH73cA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "ee30bad85a483cad2b1e4ff34e69f983a04f875a"
+        "version": "ac6360f6fc1895cbd218246f12a771f63d0e5e4f"
     },
     "anykernel-osm0sis": {
         "cargoLocks": null,
@@ -85,7 +85,7 @@
     },
     "kernelsu-main": {
         "cargoLocks": null,
-        "date": "2025-05-16",
+        "date": "2025-05-18",
         "extract": null,
         "name": "kernelsu-main",
         "passthru": null,
@@ -95,13 +95,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "fd6f839ddab28bbe161563299af8846f73d51152",
-            "sha256": "sha256-MEf17PryE81gLRjlwAFac+oi7MZE2fbOwZsMgjJzrfQ=",
+            "rev": "1dbaeaaae6db894ad1be018478d8a631dadb4525",
+            "sha256": "sha256-RvFt+drLBEbSN/tzbZdeWDNmBKuT+xC9y/9fFdIOsYs=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/tiann/KernelSU.git"
         },
-        "version": "fd6f839ddab28bbe161563299af8846f73d51152"
+        "version": "1dbaeaaae6db894ad1be018478d8a631dadb4525"
     },
     "kernelsu-main-revision-code": {
         "cargoLocks": null,
